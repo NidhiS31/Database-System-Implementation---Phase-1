@@ -1,0 +1,71 @@
+cmake_minimum_required(VERSION 3.15)
+project(P1)
+
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories(.)
+include_directories(git)
+include_directories(git/tpch-dbgen)
+
+add_executable(P1
+        git/tpch-dbgen/bcd2.c
+        git/tpch-dbgen/bcd2.h
+        git/tpch-dbgen/bm_utils.c
+        git/tpch-dbgen/build.c
+        git/tpch-dbgen/config.h
+        git/tpch-dbgen/driver.c
+        git/tpch-dbgen/dss.h
+        git/tpch-dbgen/dsstypes.h
+        git/tpch-dbgen/load_stub.c
+        git/tpch-dbgen/permute.c
+        git/tpch-dbgen/permute.h
+        git/tpch-dbgen/print.c
+        git/tpch-dbgen/qgen.c
+        git/tpch-dbgen/release.h
+        git/tpch-dbgen/rnd.c
+        git/tpch-dbgen/rnd.h
+        git/tpch-dbgen/rng64.c
+        git/tpch-dbgen/rng64.h
+        git/tpch-dbgen/shared.h
+        git/tpch-dbgen/speed_seed.c
+        git/tpch-dbgen/text.c
+        git/tpch-dbgen/tpcd.h
+        git/tpch-dbgen/varsub.c
+        catalog
+        Comparison.cc
+        Comparison.h
+        Comparison.o
+        ComparisonEngine.cc
+        ComparisonEngine.h
+        ComparisonEngine.o
+        DBFile.cc
+        DBFile.h
+        DBFile.o
+        Defs.h
+        File.cc
+        File.h
+        File.o
+        lex.yy.c
+        lex.yy.o
+        Lexer.l
+        main.cc
+        Makefile
+        output.log
+        Parser.y
+        ParseTree.h
+        README
+        Record.cc
+        Record.h
+        Record.o
+        Schema.cc
+        Schema.h
+        Schema.o
+        test.cc
+        test.h
+        test.o
+        test.out
+        TwoWayList.cc
+        TwoWayList.h
+        y.tab.c
+        y.tab.h
+        y.tab.o GTests.cc)
